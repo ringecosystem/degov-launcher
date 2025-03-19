@@ -1,0 +1,39 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    shm_size: 1gb
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: ${DEGOV_DB_PASSWORD}
+    volumes:
+      - ./.data/postgres:/var/lib/postgresql/data
+      - ./init-scripts/postgres:/docker-entrypoint-initdb.d
+    ports:
+      - "${DEGOV_DB_PORT:-7453}:5432"
+
+  indexer:
+    image: ghcr.io/ringecosystem/degov/indexer:${DEGOV_INDEXER_VERSION}
+    depends_on:
+      - postgres
+    ports:
+      - "${DEGOV_INDEXER_PORT:-4350}:4350"
+    environment:
+      DB_HOST: postgres
+      DB_NAME: indexer
+      DB_USER: postgres
+      DB_PASS: ${DEGOV_DB_PASSWORD}
+      DB_PORT: 5432
+      GQL_PORT: 4350
+      DEGOV_SYNC_ENDPOINT: http://web:3000/api/degov/sync
+      DEGOV_SYNC_AUTH_TOKEN: ${DEGOV_SYNC_AUTH_TOKEN}
+
+  web:
+    image: ghcr.io/ringecosystem/degov/web:${DEGOV_WEB_VERSION}
+    depends_on:
+      - postgres
+    ports:
+      - "${DEGOV_WEB_PORT:-3002}:3000"
+    environment:
+      JWT_SECRET_KEY: ${DEGOV_WEB_JWT_SECRET}
+      DATABASE_URL: postgresql://postgres:let-me-in@postgres/degov
+      DEGOV_SYNC_AUTH_TOKEN: ${DEGOV_SYNC_AUTH_TOKEN}
