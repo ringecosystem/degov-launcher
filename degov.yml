@@ -38,6 +38,7 @@ chain:
 
 indexer:
   ## your deployed indexer endpoint
+  ## default endpoint setted by env.DEGOV_INDEXER_POR
   endpoint: http://localhost:4350/graphql
   ## you wanted sync start block number for indexer
   startBlock: 0
