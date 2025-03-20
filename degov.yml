@@ -1,9 +1,9 @@
-name: DeGov Development Test DAO
+name: DeGov Example DAO
 logo: "https://degov-dev.vercel.app/assets/image/logo.svg"
 description: |
-  This is the development test DAO interface for DeGov users, allowing them to gain
-  firsthand experience creating proposals and voting on them before deploying
-  their own DeGov instance. The DAO is built on the Darwinia chain, an Ethereum-compatible chain.
+  This is a DeGov case configuration, powered by RingDAO,
+  showcasing how to empower your DAO to achieve transparent and efficient community governance.
+
 # The following fields in the links are optional and will be used to display basic information about the DAO
 links:
   website: https://example.com/
