@@ -24,17 +24,18 @@ chain:
   id: 1
   ## chain logo
   logo: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
-  ## other configuration, these if not required, will read it from viem or https://chainid.network
-  ## but if you set it here, it will override the default value
-  # name: ethereum
-  # rpcs:
-  #   - https://rpc.darwinia.network
-  #   - https://darwinia-rpc.dwellir.com
-  # explorers:
-  #   - https://explorer.darwinia.network/
-  # nativeToken:
-  #   ## fetch price symbol of this token
-  #   priceId: WETH
+  name: ethereum
+  rpcs:
+    - https://ethereum-rpc.publicnode.com
+  explorers:
+    - https://etherscan.io/
+  nativeToken:
+    ## native token symbol
+    symbol: RING
+    ## fetch price symbol of this token
+    priceId: RING
+    ## decimals of native token
+    decimals: 18
 
 indexer:
   ## your deployed indexer endpoint
