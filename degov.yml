@@ -1,0 +1,76 @@
+name: DeGov Example DAO
+logo: "https://degov-dev.vercel.app/assets/image/logo.svg"
+description: |
+  This is a DeGov case configuration, powered by RingDAO,
+  showcasing how to empower your DAO to achieve transparent and efficient community governance.
+
+# The following fields in the links are optional and will be used to display basic information about the DAO
+links:
+  website: https://example.com/
+  twitter: https://x.com/TWITTER
+  discord: https://discord.com/invite/DISCORD
+  telegram: https://t.me/TELEGRAM
+  github: https://github.com/GITHUB
+  email: # It's ok to leave it empty
+
+wallet:
+  # if you want to use wallet connect, you need to provide the project id
+  # please refer to https://walletconnect.network/ for more information
+  walletConnectProjectId:
+
+# Chain information: these commented fields are optional if this chain can be accessed by viem.
+chain:
+  ## chain id
+  id: 1
+  ## chain logo
+  logo: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  ## other configuration, these if not required, will read it from viem or https://chainid.network
+  ## but if you set it here, it will override the default value
+  # name: ethereum
+  # rpcs:
+  #   - https://rpc.darwinia.network
+  #   - https://darwinia-rpc.dwellir.com
+  # explorers:
+  #   - https://explorer.darwinia.network/
+  # nativeToken:
+  #   ## fetch price symbol of this token
+  #   priceId: WETH
+
+indexer:
+  ## your deployed indexer endpoint
+  endpoint: http://localhost:4350/graphql
+  ## you wanted sync start block number for indexer
+  startBlock: 0
+  ## indexer use default endpoint from above chain configuration
+  ## if you want to change different endpoint, please provide it here
+  ## there is support websocket endpoint.
+  # rpc: https://rpc.your.network
+  ## Degov use sqd.ai to index you contract, you can use gateway to fast sync your contract
+  ## more info please refer to https://docs.sqd.ai/subsquid-network/reference/networks/
+  # gateway: https://gateway.your.network
+
+# Core contracts related to the DAO Governance
+contracts:
+  ## governor contract
+  governor: "0x0000000000000000000000000000000000000000"
+  ## governor token contract
+  governorToken:
+    address: "0x0000000000000000000000000000000000000000"
+    ## token standard: ERC20, ERC721
+    ## this is important, will affect how the index calculates the number of tokens
+    ## please fill in according to the actual situation
+    standard: ERC20
+  timeLock: "0x0000000000000000000000000000000000000000"
+
+# The treasury assets information
+timeLockAssets:
+  FT:
+    contract: "0x0000000000000000000000000000000000000000"
+    standard: ERC20
+    priceId: FT
+    logo: # Default logo if not provided
+  NFT:
+    contract: "0x0000000000000000000000000000000000000000"
+    standard: ERC721
+    priceId: NFT
+    logo: # Default logo if not provided
