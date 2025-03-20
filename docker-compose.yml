@@ -17,6 +17,8 @@ services:
       - postgres
     ports:
       - "${DEGOV_INDEXER_PORT:-4350}:4350"
+    volumes:
+      - degov.yml:/app/degov.yml
     environment:
       DB_HOST: postgres
       DB_NAME: indexer
@@ -33,6 +35,8 @@ services:
       - postgres
     ports:
       - "${DEGOV_WEB_PORT:-3002}:3000"
+    volumes:
+      - degov.yml:/app/public/degov.yml
     environment:
       JWT_SECRET_KEY: ${DEGOV_WEB_JWT_SECRET}
       DATABASE_URL: postgresql://postgres:let-me-in@postgres/degov

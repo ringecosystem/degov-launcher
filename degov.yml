@@ -1,44 +1,64 @@
 name: DeGov Development Test DAO
-logo: "/example/logo.svg"
+logo: "https://degov-dev.vercel.app/assets/image/logo.svg"
 description: |
-  This is the development test DAO interface for DeGov users, allowing them to gain 
-  firsthand experience creating proposals and voting on them before deploying 
+  This is the development test DAO interface for DeGov users, allowing them to gain
+  firsthand experience creating proposals and voting on them before deploying
   their own DeGov instance. The DAO is built on the Darwinia chain, an Ethereum-compatible chain.
 # The following fields in the links are optional and will be used to display basic information about the DAO
 links:
-  website: https://ringdao.com/
-  twitter: https://x.com/ringecosystem
-  discord: https://discord.com/invite/BhNbKWWfGV
-  telegram: https://t.me/ringecosystem
-  github: https://github.com/ringecosystem/degov
+  website: https://example.com/
+  twitter: https://x.com/TWITTER
+  discord: https://discord.com/invite/DISCORD
+  telegram: https://t.me/TELEGRAM
+  github: https://github.com/GITHUB
   email: # It's ok to leave it empty
 
 wallet:
-  walletConnectProjectId: 2719448e2ce94fdd269a3c8587123bcc
+  # if you want to use wallet connect, you need to provide the project id
+  # please refer to https://walletconnect.network/ for more information
+  walletConnectProjectId:
 
 # Chain information: these commented fields are optional if this chain can be accessed by viem.
 chain:
-  id: 46
-  logo: https://darwinia.network/images/darwinia-logo-black-background-round.svg
-  # name: darwinia
+  ## chain id
+  id: 1
+  ## chain logo
+  logo: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  ## other configuration, these if not required, will read it from viem or https://chainid.network
+  ## but if you set it here, it will override the default value
+  # name: ethereum
   # rpcs:
   #   - https://rpc.darwinia.network
   #   - https://darwinia-rpc.dwellir.com
   # explorers:
   #   - https://explorer.darwinia.network/
-  nativeToken:
-    priceId: RING
+  # nativeToken:
+  #   ## fetch price symbol of this token
+  #   priceId: WETH
 
 indexer:
-  endpoint: https://degov-indexer.vercel.app/graphql
+  ## your deployed indexer endpoint
+  endpoint: http://localhost:4350/graphql
+  ## you wanted sync start block number for indexer
   startBlock: 5873342
-  # startBlock: 5897510
+  ## indexer use default endpoint from above chain configuration
+  ## if you want to change different endpoint, please provide it here
+  ## there is support websocket endpoint.
+  # rpc: https://rpc.your.network
+  ## Degov use sqd.ai to index you contract, you can use gateway to fast sync your contract
+  ## more info please refer to https://docs.sqd.ai/subsquid-network/reference/networks/
+  # gateway: https://gateway.your.network
 
 # Core contracts related to the DAO Governance
 contracts:
+  ## governor contract
   governor: "0xC9EA55E644F496D6CaAEDcBAD91dE7481Dcd7517"
+  ## governor token contract
   governorToken:
     address: "0xbC9f58566810F7e853e1eef1b9957ac82F9971df"
+    ## token standard: ERC20, ERC721
+    ## this is important, will affect how the index calculates the number of tokens
+    ## please fill in according to the actual situation
     standard: ERC20
   timeLock: "0x6AB15C6ada9515A8E21321e241013dB457C8576c"
 
