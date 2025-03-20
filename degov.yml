@@ -40,7 +40,7 @@ indexer:
   ## your deployed indexer endpoint
   endpoint: http://localhost:4350/graphql
   ## you wanted sync start block number for indexer
-  startBlock: 5873342
+  startBlock: 0
   ## indexer use default endpoint from above chain configuration
   ## if you want to change different endpoint, please provide it here
   ## there is support websocket endpoint.
