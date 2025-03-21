@@ -16,7 +16,7 @@ wallet:
   # if you want to use wallet connect, you need to provide the project id, please refer to https://walletconnect.network/ for more information.
   walletConnectProjectId:
 
-# Chain information: these commented fields are optional if this chain can be accessed by viem.
+# Chain information
 chain:
   # chain id
   id: 1
