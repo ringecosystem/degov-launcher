@@ -1,8 +1,7 @@
-name: DeGov Example DAO
-logo: "https://degov-dev.vercel.app/assets/image/logo.svg"
+name: You DAO Name
+logo: "https://your-logo-url.com/logo.svg"
 description: |
-  This is a DeGov case configuration, powered by RingDAO,
-  showcasing how to empower your DAO to achieve transparent and efficient community governance.
+  A brief description of the DAO, which will be displayed on the DAO's homepage.
 
 # The following fields in the links are optional and will be used to display basic information about the DAO
 links:
@@ -14,15 +13,14 @@ links:
   email: # It's ok to leave it empty
 
 wallet:
-  # if you want to use wallet connect, you need to provide the project id
-  # please refer to https://walletconnect.network/ for more information
+  # if you want to use wallet connect, you need to provide the project id, please refer to https://walletconnect.network/ for more information.
   walletConnectProjectId:
 
 # Chain information: these commented fields are optional if this chain can be accessed by viem.
 chain:
-  ## chain id
+  # chain id
   id: 1
-  ## chain logo
+  # chain logo
   logo: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
   name: ethereum
   rpcs:
@@ -30,38 +28,33 @@ chain:
   explorers:
     - https://etherscan.io/
   nativeToken:
-    ## native token symbol
+    # native token symbol
     symbol: RING
-    ## fetch price symbol of this token
+    # fetch price symbol of this token
     priceId: RING
-    ## decimals of native token
+    # decimals of native token
     decimals: 18
 
 indexer:
-  ## your deployed indexer endpoint
-  ## default endpoint setted by env.DEGOV_INDEXER_POR
+  # your deployed indexer endpoint default endpoint set by env.DEGOV_INDEXER_POR
   endpoint: http://localhost:4350/graphql
-  ## you wanted sync start block number for indexer
+  # The start block of the indexer
   startBlock: 0
-  ## indexer use default endpoint from above chain configuration
-  ## if you want to change different endpoint, please provide it here
-  ## there is support websocket endpoint.
+  ## Optional: If you want the indexer to use a different endpoint than the default provided in the chain configuration above, specify it here. WebSocket endpoints are also supported.
   # rpc: https://rpc.your.network
-  ## Degov use sqd.ai to index you contract, you can use gateway to fast sync your contract
-  ## more info please refer to https://docs.sqd.ai/subsquid-network/reference/networks/
+  ## Optional: Degov uses sqd.ai to index your contract. You can use the gateway for faster synchronization. For more information, please refer to https://docs.sqd.ai/subsquid-network/reference/networks/
   # gateway: https://gateway.your.network
 
 # Core contracts related to the DAO Governance
 contracts:
-  ## governor contract
+  # governor contract
   governor: "0x0000000000000000000000000000000000000000"
-  ## governor token contract
+  # governor token contract
   governorToken:
     address: "0x0000000000000000000000000000000000000000"
-    ## token standard: ERC20, ERC721
-    ## this is important, will affect how the index calculates the number of tokens
-    ## please fill in according to the actual situation
-    standard: ERC20
+    # token standard: only support ERC20 or ERC721
+    # This field is crucial as it determines how the index calculates token quantities. Please ensure it is filled out accurately based on the actual token configuration.
+    standard: ERC20 or ERC721
   timeLock: "0x0000000000000000000000000000000000000000"
 
 # The treasury assets information
