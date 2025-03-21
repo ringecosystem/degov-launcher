@@ -1,18 +1,16 @@
-<div align="center">
+# DeGov Launcher
 
-![logo](https://github.com/ringecosystem/degov/raw/main/docs/DeGov.AI.svg)
+[DeGov.AI](https://github.com/ringecosystem/degov) is an open-source, on-chain governance platform built for DAOs in the Ethereum ecosystem. This repository provides a Docker Compose configuration for launching a DeGov instance—the simplest way to set up your own governance platform.
 
-</div>
+## Getting Started
 
-# DeGov.AI
+1. Customize your DAO configuration
 
-DeGov.AI is an open-source, on-chain governance platform built for DAOs in the Ethereum ecosystem. It leverages the [Governor Framework from OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/governance) to deliver a robust, flexible, and transparent governance solution for decentralized organizations.
+    The [degov.yml](degov.yml) file is critical for configuring your DeGov. It defines your DAO's name, logo, governance parameters, and contract addresses for interaction. Follow the commented instructions to customize your governance parameters.
 
-- [ringecosystem/degov](https://github.com/ringecosystem/degov)
+2. Prepare your environment variables
 
-## Deploy
+    Copy [.env.sample](.env.sample) to `.env` and follow the instructions to update your environment variables.
 
-1. Update the [degov.yml](degov.yml) file with your DAO configuration.
-2. Copy [.env.sample](.env.sample) to `.env` and update your environment variables.
-3. Run `docker compose up -d`
-4. Visit http://localhost:3002 to view your DAO's DeGov interface.
+3. Run `docker compose up -d` to start the DeGov instance and verify all services are running.
+4. Visit http://localhost:3002 to access your DAO's DeGov interface. Note that it may take some time to sync blockchain data.
