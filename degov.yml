@@ -1,5 +1,6 @@
 name: You DAO Name
 logo: "https://your-logo-url.com/logo.svg"
+siteUrl: https://your-site-url.com
 description: |
   A brief description of the DAO, which will be displayed on the DAO's homepage.
 
@@ -59,13 +60,22 @@ contracts:
 
 # The treasury assets information
 timeLockAssets:
-  FT:
+  - name: FT
     contract: "0x0000000000000000000000000000000000000000"
     standard: ERC20
     priceId: FT
     logo: # Default logo if not provided
-  NFT:
+  - name: NFT
     contract: "0x0000000000000000000000000000000000000000"
     standard: ERC721
     priceId: NFT
     logo: # Default logo if not provided
+
+# The treasury safes information
+safes:
+  - name: Safe Account 01
+    chainId: 42161
+    link: https://app.safe.global/home?safe=arb1:0x0000000000000000000000000000000000000000
+  - name: Safe Account 02
+    chainId: 11155111
+    link: https://app.safe.global/home?safe=sep:0x0000000000000000000000000000000000000000
