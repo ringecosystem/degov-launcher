@@ -19,11 +19,12 @@ wallet:
 
 # Chain information
 chain:
+  # chain name, displayed on the project dashboard
+  name: Ethereum
   # chain id
   id: 1
   # chain logo
   logo: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
-  name: ethereum
   rpcs:
     - https://ethereum-rpc.publicnode.com
   explorers:
