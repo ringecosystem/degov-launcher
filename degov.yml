@@ -1,6 +1,7 @@
 name: You DAO Name
 logo: "https://your-logo-url.com/logo.svg"
 siteUrl: https://your-site-url.com
+offChainDiscussionUrl: https://your-offchain-discussion-url.com
 description: |
   A brief description of the DAO, which will be displayed on the DAO's homepage.
 
@@ -31,9 +32,9 @@ chain:
     - https://etherscan.io/
   nativeToken:
     # native token symbol
-    symbol: RING
+    symbol: ETH
     # fetch price symbol of this token
-    priceId: RING
+    priceId: ethereum
     # decimals of native token
     decimals: 18
 
