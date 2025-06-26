@@ -2,6 +2,8 @@ name: You DAO Name
 logo: "https://your-logo-url.com/logo.svg"
 siteUrl: https://your-site-url.com
 offChainDiscussionUrl: https://your-offchain-discussion-url.com
+aiAgent:
+  endpoint: https://agent.degov.ai
 description: |
   A brief description of the DAO, which will be displayed on the DAO's homepage.
 
