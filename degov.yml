@@ -64,7 +64,7 @@ contracts:
   timeLock: "0x0000000000000000000000000000000000000000"
 
 # The treasury assets information
-timeLockAssets:
+treasuryAssets:
   - name: FT
     contract: "0x0000000000000000000000000000000000000000"
     standard: ERC20
