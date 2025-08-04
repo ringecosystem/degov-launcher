@@ -2,8 +2,6 @@ name: You DAO Name
 logo: "https://your-logo-url.com/logo.svg"
 siteUrl: https://your-site-url.com
 offChainDiscussionUrl: https://your-offchain-discussion-url.com
-aiAgent:
-  endpoint: https://agent.degov.ai
 description: |
   A brief description of the DAO, which will be displayed on the DAO's homepage.
 
@@ -17,6 +15,7 @@ links:
   github: https://github.com/GITHUB
   email: # It's ok to leave it empty
 
+# Wallet connection related configuration
 wallet:
   # if you want to use wallet connect, you need to provide the project id, please refer to https://walletconnect.network/ for more information.
   walletConnectProjectId:
@@ -41,6 +40,7 @@ chain:
     # decimals of native token
     decimals: 18
 
+# Indexer related configuration
 indexer:
   # your deployed indexer endpoint default endpoint set by env.DEGOV_INDEXER_POR
   endpoint: http://localhost:4350/graphql
@@ -50,6 +50,10 @@ indexer:
   # rpc: https://rpc.your.network
   ## Optional: Degov uses sqd.ai to index your contract. You can use the gateway for faster synchronization. For more information, please refer to https://docs.sqd.ai/subsquid-network/reference/networks/
   # gateway: https://gateway.your.network
+
+# AI Agent related configuration
+aiAgent:
+  endpoint: https://agent.degov.ai
 
 # Core contracts related to the DAO Governance
 contracts:
