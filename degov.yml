@@ -15,6 +15,13 @@ links:
   github: https://github.com/GITHUB
   email: # It's ok to leave it empty
 
+# The custom theme configuration for the DAO, this is optional.
+theme:
+  logoDark: https://your-logo-dark-url.com/logo-dark.svg
+  logoLight: https://your-logo-light-url.com/logo-light.svg
+  banner: https://your-banner-url.com/banner.svg
+  bannerMobile: https://your-banner-mobile-url.com/banner-mobile.svg
+
 # Wallet connection related configuration
 wallet:
   # if you want to use wallet connect, you need to provide the project id, please refer to https://walletconnect.network/ for more information.
