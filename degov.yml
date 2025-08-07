@@ -1,5 +1,5 @@
 name: You DAO Name
-logo: "https://your-logo-url.com/logo.svg"
+logo: https://your-logo-url.com/logo.svg
 siteUrl: https://your-site-url.com
 offChainDiscussionUrl: https://your-offchain-discussion-url.com
 description: |
@@ -29,16 +29,16 @@ wallet:
 
 # Chain information
 chain:
-  # chain name, displayed on the project dashboard
-  name: Ethereum
   # chain id
   id: 1
+  # chain name, displayed on the project dashboard
+  name: Ethereum
   # chain logo
   logo: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
   rpcs:
     - https://ethereum-rpc.publicnode.com
   explorers:
-    - https://etherscan.io/
+    - https://etherscan.io
   nativeToken:
     # native token symbol
     symbol: ETH
@@ -46,6 +46,8 @@ chain:
     priceId: ethereum
     # decimals of native token
     decimals: 18
+    # native token logo
+    logo: http://app.example.com/token-logo.svg
 
 # Indexer related configuration
 indexer:
