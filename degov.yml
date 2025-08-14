@@ -1,4 +1,6 @@
 name: You DAO Name
+# This is the unique code for your DAO, see https://github.com/ringecosystem/degov-registry/tree/main/daos to avoid duplication
+code: your-dao-code
 logo: https://your-logo-url.com/logo.svg
 siteUrl: https://your-site-url.com
 offChainDiscussionUrl: https://your-offchain-discussion-url.com
@@ -21,6 +23,19 @@ theme:
   logoLight: https://your-logo-light-url.com/logo-light.svg
   banner: https://your-banner-url.com/banner.svg
   bannerMobile: https://your-banner-mobile-url.com/banner-mobile.svg
+  # The general faqs displayed on the dashboard, at most 5 items
+  faqs:
+    - question: q1
+      answer: http://the-answer-of-q1.com
+    - question: q2
+      answer: http://the-answer-of-q2.com
+    - question: q3
+      answer: http://the-answer-of-q3.com
+    - question: q4
+      answer: http://the-answer-of-q4.com
+    - question: q5
+      answer: http://the-answer-of-q5.com
+
 
 # Wallet connection related configuration
 wallet:
