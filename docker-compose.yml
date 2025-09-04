@@ -28,6 +28,11 @@ services:
       GQL_PORT: 4350
       DEGOV_SYNC_ENDPOINT: http://web:3000/api/degov/sync
       DEGOV_SYNC_AUTH_TOKEN: ${DEGOV_SYNC_AUTH_TOKEN}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+      OPENROUTER_DEFAULT_MODEL: ${OPENROUTER_DEFAULT_MODEL}
+      CHAIN_RPC_1: ${CHAIN_RPC_1}
+      # CHAIN_RPC_10: ${CHAIN_RPC_10}
+      # CHAIN_RPC_...: ${CHAIN_RPC_...}
 
   web:
     image: ghcr.io/ringecosystem/degov/web:${DEGOV_WEB_VERSION}
@@ -39,5 +44,5 @@ services:
       - ./degov.yml:/app/public/degov.yml
     environment:
       JWT_SECRET_KEY: ${DEGOV_WEB_JWT_SECRET}
-      DATABASE_URL: postgresql://postgres:let-me-in@postgres/degov
+      DATABASE_URL: postgresql://postgres:${DEGOV_DB_PASSWORD}@postgres/degov
       DEGOV_SYNC_AUTH_TOKEN: ${DEGOV_SYNC_AUTH_TOKEN}
