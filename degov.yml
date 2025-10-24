@@ -92,7 +92,8 @@ contracts:
     standard: ERC20 or ERC721
   timeLock: "0x0000000000000000000000000000000000000000"
 
-# The treasury assets information
+# The treasury assets information (Optional)
+# If not provided, Degov will fetch the assets via built-in degov-api, otherwise, will use the provided list.
 treasuryAssets:
   - name: FT
     contract: "0x0000000000000000000000000000000000000000"
