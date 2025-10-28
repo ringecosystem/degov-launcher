@@ -94,6 +94,7 @@ contracts:
 
 # The treasury assets information (Optional)
 # If not provided, Degov will fetch the assets via built-in degov-api, otherwise, will use the provided list.
+# Automatic fetching treasury assets may not cover some less known chains, manual configuration is available in that case.
 treasuryAssets:
   - name: FT
     contract: "0x0000000000000000000000000000000000000000"
